@@ -1,0 +1,40 @@
+{
+    "js": {
+        "plyr-vr.js": {
+            "src": "./src/plugin.js",
+            "dist": "./dist/",
+            "formats": [
+                "es",
+                "umd"
+            ],
+            "namespace": "PlyrVr",
+            "externals": {
+                "es":{
+                    "plyr": "Plyr",
+                    "three": "THREE",
+                    "webvr-polyfill":"WebVRPolyfill",
+                    "global": "window",
+                    "@babel/runtime":"balbel"
+                },
+                "umd": {
+                    "plyr": "Plyr",
+                    "global": "window",
+                    "global/window": "window",
+                    "global/document": "document"
+                }
+            }
+        }
+    },
+    "css": {
+        "plyr-vr.css": {
+            "src": "./src/plugin.scss",
+            "dist": "./dist/"
+        }
+    },
+    "sprite": {
+        "plyr.svg": {
+            "src": "./src/*.svg",
+            "dist": "./dist"
+        }
+    }
+}
