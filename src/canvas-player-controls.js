@@ -1,6 +1,6 @@
 import { Plyr } from './video';
 
-const isSingleLeftClick=function(event) {
+const isSingleLeftClick = function(event) {
   // Note: if you create something draggable, be sure to
   // call it on both `mousedown` and `mousemove` event,
   // otherwise `mousedown` should be enough for a button
@@ -45,7 +45,7 @@ const isSingleLeftClick=function(event) {
   }
 
   return true;
-}
+};
 
 /**
  * This class reacts to interactions with the canvas and
@@ -57,7 +57,7 @@ const isSingleLeftClick=function(event) {
  * 2. Only moving on/clicking the control bar or toggling play/pause should
  *    show the control bar. Moving around the scene in the canvas should not.
  */
-class CanvasPlayerControls{
+class CanvasPlayerControls {
   constructor(player, canvas) {
 
     this.player = player;
@@ -84,7 +84,7 @@ class CanvasPlayerControls{
     this.player.togglePlay();
   }
 
-  onClick(e){
+  onClick(e) {
     e.stopPropagation();
   }
 

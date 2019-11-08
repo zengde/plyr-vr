@@ -1,4 +1,4 @@
-const generate = require('./videojs-generate-rollup-config');
+const generate = require('videojs-generate-rollup-config');
 const replace = require('./rollup-replace');
 
 // see https://github.com/videojs/videojs-generate-rollup-config
@@ -19,14 +19,14 @@ const options = {
   globals(defaults) {
     return {
       browser: Object.assign(defaults.browser, {
-        'plyr': 'Plyr',
+        plyr: 'Plyr'
       }),
       module: Object.assign(defaults.module, {
-        'plyr': 'Plyr',
+        plyr: 'Plyr'
       }),
       test: Object.assign(defaults.test, {
-        'plyr': 'Plyr',
-      }),
+        plyr: 'Plyr'
+      })
     };
   }
 };

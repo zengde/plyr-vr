@@ -1,3 +1,5 @@
+import document from 'global/document';
+
 // check if the browser supports cors
 export const corsSupport = (function() {
   const video = document.createElement('video');

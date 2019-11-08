@@ -80,7 +80,7 @@ class VR extends Plugin {
     player.on('loadedmetadata', this.init);
   }
 
-  changeProjection_ (projection) {
+  changeProjection_(projection) {
     projection = utils.getInternalProjectionName(projection);
     // don't change to an invalid projection
     if (!projection) {
@@ -382,7 +382,7 @@ void main() {
 
   }
 
-  triggerError_ (errorObj) {
+  triggerError_(errorObj) {
     const div = document.createElement('div');
 
     div.innerHTML = errors[errorObj.code].message;
@@ -395,7 +395,7 @@ void main() {
     });
   }
 
-  log (...msgs) {
+  log(...msgs) {
     if (!this.options_.debug) {
       return;
     }
@@ -405,7 +405,7 @@ void main() {
     });
   }
 
-  handleVrDisplayActivate_ () {
+  handleVrDisplayActivate_() {
     if (!this.vrDisplay) {
       return;
     }
@@ -455,7 +455,7 @@ void main() {
     });
   }
 
-  handleVrDisplayDeactivate_ () {
+  handleVrDisplayDeactivate_() {
     if (!this.vrDisplay || !this.vrDisplay.isPresenting) {
       return;
     }
@@ -466,7 +466,7 @@ void main() {
 
   }
 
-  requestAnimationFrame (fn) {
+  requestAnimationFrame(fn) {
     if (this.vrDisplay) {
       return this.vrDisplay.requestAnimationFrame(fn);
     }
@@ -474,7 +474,7 @@ void main() {
     return window.requestAnimationFrame(fn);
   }
 
-  cancelAnimationFrame (id) {
+  cancelAnimationFrame(id) {
     if (this.vrDisplay) {
       return this.vrDisplay.cancelAnimationFrame(id);
     }
@@ -482,11 +482,11 @@ void main() {
     return window.cancelAnimationFrame(id);
   }
 
-  togglePlay_ () {
+  togglePlay_() {
     this.player_.togglePlay();
   }
 
-  animate_ () {
+  animate_() {
     if (!this.initialized_) {
       return;
     }
@@ -528,7 +528,7 @@ void main() {
     this.animationFrameId_ = this.requestAnimationFrame(this.animate_);
   }
 
-  handleResize_ () {
+  handleResize_() {
     const width = this.player_.currentWidth();
     const height = this.player_.currentHeight();
 
@@ -537,7 +537,7 @@ void main() {
     this.camera.updateProjectionMatrix();
   }
 
-  setProjection (projection) {
+  setProjection(projection) {
 
     if (!utils.getInternalProjectionName(projection)) {
       this.player_.console.error('videojs-vr: please pass a valid projection ' + utils.validProjections.join(', '));
@@ -548,7 +548,7 @@ void main() {
     this.defaultProjection_ = projection;
   }
 
-  init () {
+  init() {
     this.reset();
 
     this.camera = new THREE.PerspectiveCamera(75, this.player_.currentWidth() / this.player_.currentHeight(), 1, 1000);
@@ -590,7 +590,7 @@ void main() {
 
     // if ios remove full screen toggle
     if (browser.IS_IOS && this.player_.elements.buttons.fullscreen) {
-      this.player_.elements.buttons.fullscreen.style.display='none';
+      this.player_.elements.buttons.fullscreen.style.display = 'none';
     }
 
     this.camera.position.set(0, 0, 0);
@@ -702,19 +702,19 @@ void main() {
     window.addEventListener('vrdisplaydeactivate', this.handleVrDisplayDeactivate_, true);
 
     this.initialized_ = true;
-    //this.trigger('initialized');
+    // this.trigger('initialized');
   }
 
-  addCardboardButton_ () {
-    this.player_.vrplayButton=new CardboardButton(this);
+  addCardboardButton_() {
+    this.player_.vrplayButton = new CardboardButton(this);
     this.player_.vrplayButton.setup();
   }
 
-  getVideoEl_ () {
+  getVideoEl_() {
     return this.player_.media;
   }
 
-  reset () {
+  reset() {
     if (!this.initialized_) {
       return;
     }
@@ -755,7 +755,7 @@ void main() {
 
     // show the fullscreen again
     if (browser.IS_IOS) {
-      this.player_.elements.buttons.fullscreen.style.display='block';
+      this.player_.elements.buttons.fullscreen.style.display = 'block';
     }
 
     // reset the video element style so that it will be displayed
@@ -784,12 +784,12 @@ void main() {
     this.initialized_ = false;
   }
 
-  dispose () {
+  dispose() {
     super.dispose();
     this.reset();
   }
 
-  polyfillVersion () {
+  polyfillVersion() {
     return WebVRPolyfill.version;
   }
 }

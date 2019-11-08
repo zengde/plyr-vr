@@ -1,3 +1,4 @@
+import window from 'global/window';
 import browser from 'plyr/src/js/utils/browser';
 import controls from 'plyr/src/js/controls';
 import { Plyr } from './video';
@@ -6,8 +7,8 @@ import { Plyr } from './video';
 
 class CardboardButton {
   constructor(plugin, options) {
-    this.player=plugin.player;
-    this.vr=plugin;
+    this.player = plugin.player;
+    this.vr = plugin;
 
     this.handleVrDisplayActivate_ = Plyr.bind(this, this.handleVrDisplayActivate_);
     this.handleVrDisplayDeactivate_ = Plyr.bind(this, this.handleVrDisplayDeactivate_);
@@ -50,7 +51,7 @@ class CardboardButton {
   }
 
   handleOrientationChange_() {
-    if (this.active_ && videojs.browser.IS_IOS) {
+    if (this.active_ && browser.IS_IOS) {
       this.changeSize_();
     }
   }
@@ -111,10 +112,11 @@ class CardboardButton {
     window.removeEventListener('vrdisplaypresentchange', this.handleVrDisplayPresentChange_);
   }
 
-  setup(){
+  setup() {
     const {
-      createButton,
+      createButton
     } = controls;
+
     this.player.elements.controls.appendChild(createButton.call(this.player, 'vr', { class: 'plyr__controls__item plyr__control--vr' }));
   }
 }
