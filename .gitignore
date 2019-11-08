@@ -34,3 +34,6 @@ test/dist/
 deploy/
 samples/
 _ss
+
+# Local Netlify folder
+.netlify

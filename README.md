@@ -8,7 +8,7 @@ https://plyr-vr.netlify.com
 [![Build Status](https://travis-ci.org/zengde/plyr-vr.svg?branch=master)](https://travis-ci.org/zengde/plyr-vr)
 [![Greenkeeper badge](https://badges.greenkeeper.io/zengde/plyr-vr.svg)](https://greenkeeper.io/)
 [![Slack Status](http://slack.videojs.com/badge.svg)](http://slack.videojs.com)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/72fb5012-1a07-433d-a286-2f4bf152c410/deploy-status)](https://app.netlify.com/sites/plyr-vr/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/92c73874-bc90-4fa9-a2b8-3453c94f39d9/deploy-status)](https://app.netlify.com/sites/plyr-vr/deploys)
 
 [![NPM](https://nodei.co/npm/plyr-vr.png?downloads=true&downloadRank=true)](https://nodei.co/npm/plyr-vr/)
 
@@ -29,7 +29,6 @@ Maintenance Status: Stable
   - [`<script>` Tag](#script-tag)
   - [Browserify/CommonJS](#browserifycommonjs)
   - [RequireJS/AMD](#requirejsamd)
-  - [Optional integration with videojs-errors](#optional-integration-with-videojs-errors)
 - [Setting a global projection](#setting-a-global-projection)
   - [Passing a projection on a source by source basis](#passing-a-projection-on-a-source-by-source-basis)
 - [Oculus Rift and HTC Vive Support](#oculus-rift-and-htc-vive-support)
