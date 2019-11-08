@@ -32,7 +32,6 @@ test/dist/
 .eslintcache
 .yo-rc.json
 deploy/
-samples/
 _ss
 
 # Local Netlify folder
