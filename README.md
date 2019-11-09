@@ -6,9 +6,10 @@ this repo is migration of [videojs-vr](https://github.com/videojs/videojs-vr) to
 https://plyr-vr.netlify.com
 
 [![Build Status](https://travis-ci.org/zengde/plyr-vr.svg?branch=master)](https://travis-ci.org/zengde/plyr-vr)
-[![Greenkeeper badge](https://badges.greenkeeper.io/zengde/plyr-vr.svg)](https://greenkeeper.io/)
-[![Slack Status](http://slack.videojs.com/badge.svg)](http://slack.videojs.com)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/92c73874-bc90-4fa9-a2b8-3453c94f39d9/deploy-status)](https://app.netlify.com/sites/plyr-vr/deploys)
+[![](https://img.shields.io/github/package-json/dependency-version/zengde/plyr-vr/three)]()
+[![](https://img.shields.io/github/package-json/dependency-version/zengde/plyr-vr/webvr-polyfill)]()
+[![](https://img.shields.io/github/package-json/dependency-version/zengde/plyr-vr/plyr)]()
+[![](https://data.jsdelivr.com/v1/package/npm/plyr-vr/badge)](https://www.jsdelivr.com/package/npm/plyr-vr)
 
 [![NPM](https://nodei.co/npm/plyr-vr.png?downloads=true&downloadRank=true)](https://nodei.co/npm/plyr-vr/)
 
