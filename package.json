@@ -1,6 +1,6 @@
 {
   "name": "plyr-vr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A plugin to add 360 and VR video support to plyr.",
   "author": {
     "name": "zengde",
