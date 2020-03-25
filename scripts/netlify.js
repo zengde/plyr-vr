@@ -9,4 +9,4 @@ shell.mkdir('-p', path.join(DEPLOY_DIR, 'node_modules'));
   shell.cp('-R', path.join(BASE_DIR, f), DEPLOY_DIR);
 });
 shell.cp('-R', path.join(BASE_DIR, 'node_modules', 'plyr'), path.join(DEPLOY_DIR, 'node_modules'));
-
+shell.cp('-R', path.join(BASE_DIR, 'node_modules', 'omnitone'), path.join(DEPLOY_DIR, 'node_modules'));
