@@ -754,7 +754,7 @@ void main() {
     }
 
     // show the fullscreen again
-    if (browser.IS_IOS) {
+    if (browser.IS_IOS && this.player_.elements.buttons.fullscreen) {
       this.player_.elements.buttons.fullscreen.style.display = 'block';
     }
 
