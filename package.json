@@ -90,7 +90,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svgstore": "^7.0.1",
     "gulp-terser": "^1.1.7",
-    "karma": "^4.0.0",
+    "karma": "^6.3.14",
     "karma-chrome-launcher": "^3.1.0",
     "karma-qunit": "^4.0.0",
     "node-sass": "^4.12.0",
