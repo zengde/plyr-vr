@@ -185,7 +185,7 @@ var player = new Plyr('my-video-css-selector');
 
 player.vr().camera;
 player.vr().scene;
-player.vr().rendeer;
+player.vr().renderer;
 ```
 
 ## Options
