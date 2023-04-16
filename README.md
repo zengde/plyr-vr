@@ -62,7 +62,7 @@ Maintenance Status: Stable
 ## Installation
 
 ```sh
-npm install --save plyr-vr
+npm i --save plyr-vr
 ```
 
 ## Browser Support
