@@ -207,6 +207,14 @@ Can be any of the following:
 #### `'180'`
 The video is half sphere and the user should not be able to look behind themselves
 
+#### `'180_lr'`
+Used for side-by-side 180 videos
+The video is half sphere and the user should not be able to look behind themselves 
+
+#### `'180_mono'`
+Used for monoscopic 180 videos
+The video is half sphere and the user should not be able to look behind themselves
+
 #### `'360'`, `'Sphere'`, or `'equirectangular'`
 The video is a sphere
 
