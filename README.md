@@ -24,6 +24,7 @@ Maintenance Status: Stable
 
 - [Installation](#installation)
 - [Browser Support](#browser-support)
+- [Caveats](#caveats)
 - [Projection support](#projection-support)
 - [Usage](#usage)
   - [`<script>` Tag](#script-tag)
@@ -54,6 +55,7 @@ Maintenance Status: Stable
   - [`debug`](#debug)
   - [`omnitone`](#omnitone)
   - [`omnitoneOptions`](#omnitoneoptions)
+  - [`disableTogglePlay`](#disabletoggleplay)
 - [Credits](#credits)
 - [Support](#support)
 
@@ -74,6 +76,9 @@ The most recent versions of:
 * Mobile
   * Chrome on Android
   * Safari on iOS
+
+## Caveats
+* HLS captions on safari will not be visible as they are located inside of the shadowRoot in the video element and we cannot get access to them.
 
 ## Projection support
 Currently we only support:
