@@ -22,7 +22,6 @@ Maintenance Status: Stable
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Installation](#installation)
 - [Browser Support](#browser-support)
 - [Projection support](#projection-support)
@@ -40,6 +39,8 @@ Maintenance Status: Stable
   - [`motionControls`](#motioncontrols)
   - [`projection`](#projection)
     - [`'180'`](#180)
+    - [`'180_LR'`](#180_lr)
+    - [`'180_MONO'`](#180_mono)
     - [`'360'`, `'Sphere'`, or `'equirectangular'`](#360-sphere-or-equirectangular)
     - [`'Cube'` or `'360_CUBE'`](#cube-or-360_cube)
     - [`'NONE'`](#none)
@@ -48,6 +49,7 @@ Maintenance Status: Stable
     - [`'360_TB'`](#360_tb)
     - [`'EAC'`](#eac)
     - [`'EAC_LR'`](#eac_lr)
+  - [`sphereDetail`](#spheredetail)
   - [`player.mediainfo.projection`](#playermediainfoprojection)
   - [`debug`](#debug)
   - [`omnitone`](#omnitone)
@@ -207,11 +209,11 @@ Can be any of the following:
 #### `'180'`
 The video is half sphere and the user should not be able to look behind themselves
 
-#### `'180_lr'`
+#### `'180_LR'`
 Used for side-by-side 180 videos
 The video is half sphere and the user should not be able to look behind themselves 
 
-#### `'180_mono'`
+#### `'180_MONO'`
 Used for monoscopic 180 videos
 The video is half sphere and the user should not be able to look behind themselves
 
@@ -238,6 +240,14 @@ Used for Equi-Angular Cubemap videos
 
 #### `'EAC_LR'`
 Used for side-by-side Equi-Angular Cubemap videos
+
+### `sphereDetail`
+
+> type: `number`, default: `32`
+
+This alters the number of segments in the spherical mesh onto which equirectangular
+videos are projected. The default is `32` but in some circumstances you may notice
+artifacts and need to increase this number.
 
 ### `player.mediainfo.projection`
 
