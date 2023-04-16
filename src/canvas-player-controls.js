@@ -58,10 +58,11 @@ const isSingleLeftClick = function(event) {
  *    show the control bar. Moving around the scene in the canvas should not.
  */
 class CanvasPlayerControls {
-  constructor(player, canvas) {
+  constructor(player, canvas, options) {
 
     this.player = player;
     this.canvas = canvas;
+    this.options = options;
 
     this.onMoveEnd = Plyr.bind(this, this.onMoveEnd);
     this.onMoveStart = Plyr.bind(this, this.onMoveStart);
@@ -93,7 +94,7 @@ class CanvasPlayerControls {
     // if the player does not have a controlbar or
     // the move was a mouse click but not left click do not
     // toggle play.
-    if (!this.player.playing || (e.type === 'mousedown' && !isSingleLeftClick(e))) {
+    if (this.options.disableTogglePlay || !this.player.playing || (e.type === 'mousedown' && !isSingleLeftClick(e))) {
       this.shouldTogglePlay = false;
       return;
     }

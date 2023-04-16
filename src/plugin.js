@@ -23,7 +23,8 @@ const defaults = {
   forceCardboard: false,
   omnitoneOptions: {},
   projection: 'AUTO',
-  sphereDetail: 32
+  sphereDetail: 32,
+  disableTogglePlay: false
 };
 
 const errors = {
@@ -692,7 +693,7 @@ void main() {
           }
 
           this.controls3d = new OrbitOrientationControls(options);
-          this.canvasPlayerControls = new CanvasPlayerControls(this.player_, this.renderedCanvas);
+          this.canvasPlayerControls = new CanvasPlayerControls(this.player_, this.renderedCanvas, this.options_);
         }
 
         this.animationFrameId_ = this.requestAnimationFrame(this.animate_);
