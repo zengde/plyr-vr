@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>plyr-vr Demo</title>
+</head>
+<body>
+  <p>EAC video</p>
+  <video width="640" height="300" id="videojs-vr-player-eac" class="video-js vjs-default-skin" controls playsinline>
+
+  </video>
+  <p>Credits: Animations for Physics and Astronomy, CC-BY-3.0</p>
+  <ul>
+    <li><a href="../">return to main example</a></li>
+  </ul>
+  <script type="module">
+    import {Plyr} from '/main.js';
+
+    const source = '/samples/lcs15_eac.mp4';
+    const video = document.querySelector('video');
+    video.src = source;
+
+    window.vr_eac = new Plyr(video).vr({projection: 'EAC', debug: true, forceCardboard: false});
+  </script>
+</body>
+</html>

@@ -1,17 +1,15 @@
 <meta charset='utf-8' />
 <div style='width:840px;'>
-    <video preload="metadata" id="player" playsinline controls crossorigin="anonymous">
+    <video style='width:100%;' preload="metadata" id="player" playsinline controls crossorigin="anonymous">
 
     </video>
 </div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.5.4/dist/plyr.css" />
-<link rel="stylesheet" href="../dist/plyr-vr.css" />
-<script src="https://cdn.jsdelivr.net/npm/plyr@3.5.4/dist/plyr.min.js"></script>
-<script src="../dist/plyr-vr.js"></script>
-
-<script>
-    const source = '../samples/video_180.mp4';
+<ul>
+    <li><a href="../">return to main example</a></li>
+</ul>
+<script type="module">
+    import {Plyr} from '/main.js';
+    const source = '/samples/video_180.mp4';
     const video = document.querySelector('video');
     video.src=source;
 

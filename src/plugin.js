@@ -217,7 +217,9 @@ class VR extends Plugin {
         Math.PI,
         Math.PI
       );
-
+      console.dir(geometry)
+      console.dir(this.options_)
+      
       // Left eye view
       geometry.scale(-1, 1, 1);
       let uvs = geometry.faceVertexUvs[0];

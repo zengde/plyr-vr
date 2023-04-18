@@ -4,15 +4,20 @@
 <head>
   <meta charset="utf-8">
   <title>videojs-vr Demo</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.5.4/dist/plyr.css" />
-  <link rel="stylesheet" href="../dist/plyr-vr.css" />
 </head>
 
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/plyr@3.5.4/dist/plyr.min.js"></script>
-  <script src="../dist/plyr-vr.js"></script>
+  <div style='width:840px;'>
+    <video style='width:100%;' preload="metadata" id="player" playsinline controls crossorigin="anonymous">
 
-  <script>
+    </video>
+  </div>
+  <ul>
+    <li><a href="../">return to main example</a></li>
+  </ul>
+  <script type="module">
+    import {Plyr} from '/main.js';
+    
     const source = '../samples/eagle-360.mp4';
     const video = document.querySelector('video');
     video.src = source;

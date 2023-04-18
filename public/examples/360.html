@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>plyr-vr Demo</title>
+</head>
+
+<body>
+  <div style='width:840px;'>
+    <video style='width:100%;' preload="metadata" id="player" playsinline controls crossorigin="anonymous">
+
+    </video>
+  </div>
+  <ul>
+    <li><a href="../">return to main example</a></li>
+  </ul>
+  <script type="module">
+    import {Plyr} from '/main.js';
+    const source = '/samples/eagle-360.mp4';
+    const video = document.querySelector('video');
+    video.src = source;
+
+    var player = window.player = new Plyr(video);
+    player.mediainfo = player.mediainfo || {};
+    player.mediainfo.projection = '360';
+
+    // AUTO is the default and looks at mediainfo
+    var vr = window.vr = player.vr({ projection: 'AUTO', debug: true, forceCardboard: false });
+  </script>
+</body>
+
+</html>

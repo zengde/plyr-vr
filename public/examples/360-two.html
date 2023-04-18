@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>plyr-vr Demo</title>
+</head>
+<body>
+  <video width="640" height="300" id="videojs-vr-player" class="video-js vjs-default-skin" controls playsinline>
+
+  </video>
+  <ul>
+    <li><a href="../">return to main example</a></li>
+  </ul>
+  <script type="module">
+    import {Plyr} from '/main.js';
+
+    const source = '/samples/lcs15_rect.mp4';
+    const video = document.querySelector('video');
+    video.src = source;
+
+    var player = window.player = new Plyr(video);
+    player.mediainfo = player.mediainfo || {};
+    player.mediainfo.projection = '360';
+
+    // AUTO is the default and looks at mediainfo
+    var vr = window.vr = player.vr({projection: 'AUTO', debug: true, forceCardboard: false});
+  </script>
+</body>
+</html>

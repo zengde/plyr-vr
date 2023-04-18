@@ -1,21 +1,23 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title>plyr-vr Demo disabled tooglePlay</title>
-  <link href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" rel="stylesheet">
-  <link href="../dist/plyr-vr.css" rel="stylesheet">
+  <title>plyr-vr Demo</title>
 </head>
+
 <body>
   <div style='width:840px;'>
-    <video preload="metadata" id="player" playsinline controls crossorigin="anonymous">
+    <video style='width:100%;' preload="metadata" id="player" playsinline controls crossorigin="anonymous">
 
     </video>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js"></script>
-  <script src="../dist/plyr-vr.js"></script>
-  <script>
-    const source = 'https://storage.googleapis.com/omnitone-demo.google.com.a.appspot.com/fuerza-imprevista-1080p-h264-aac.mp4';
+  <ul>
+    <li><a href="../">return to main example</a></li>
+  </ul>
+  <script type="module">
+    import {Plyr} from '/main.js';
+    const source = '/samples/video_180_lefteyeonly.mp4';
     const video = document.querySelector('video');
     video.src = source;
 
@@ -46,9 +48,10 @@
     });
     window.player = player;
     player.mediainfo = player.mediainfo || {};
-    player.mediainfo.projection = '360';
+    player.mediainfo.projection = '180_MONO';
 
-    var vr = window.vr = player.vr({ projection: 'AUTO', disableTogglePlay: true, debug: true, forceCardboard: true });
+    var vr = window.vr = player.vr({ projection: '180_MONO', debug: true, forceCardboard: true });
   </script>
 </body>
+
 </html>
